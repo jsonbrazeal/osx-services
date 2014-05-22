@@ -8,14 +8,15 @@
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
-				<string>New Encrypted Disk Image</string>
+				<string>New encrypted dmg on Desktop</string>
 			</dict>
 			<key>NSMessage</key>
 			<string>runWorkflowAsService</string>
-			<key>NSSendFileTypes</key>
-			<array>
-				<string>public.item</string>
-			</array>
+			<key>NSRequiredContext</key>
+			<dict>
+				<key>NSApplicationIdentifier</key>
+				<string>com.apple.finder</string>
+			</dict>
 		</dict>
 	</array>
 </dict>

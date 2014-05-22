@@ -111,7 +111,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.500000:1008.000000</string>
+				<string>428.500000:1232.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Set Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -183,8 +183,6 @@
 				</array>
 				<key>OutputUUID</key>
 				<string>234D3DE4-CDE5-42DD-9ED8-08EE02F38A2F</string>
-				<key>StartAction</key>
-				<false/>
 				<key>UUID</key>
 				<string>C41838BC-A596-48FE-97D4-05474C41680B</string>
 				<key>UnlocalizedApplications</key>
@@ -212,12 +210,10 @@ end run</string>
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.500000:904.000000</string>
+				<string>428.500000:1072.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -318,8 +314,6 @@ end run</string>
 				</array>
 				<key>OutputUUID</key>
 				<string>05E51CDF-146D-44DB-8514-3C817D5610E0</string>
-				<key>StartAction</key>
-				<false/>
 				<key>UUID</key>
 				<string>0C05B587-F517-4BE7-B067-6F00CD2EB7EA</string>
 				<key>UnlocalizedApplications</key>
@@ -398,7 +392,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.500000:591.000000</string>
+				<string>428.500000:759.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Ask for Text.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -506,7 +500,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.500000:409.000000</string>
+				<string>428.500000:632.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Set Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -614,7 +608,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.500000:305.000000</string>
+				<string>428.500000:472.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -813,50 +807,237 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.500000:202.000000</string>
+				<string>428.500000:369.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/New Disk Image.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
 		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>v.1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>variableUUID</key>
+					<dict>
+						<key>isPathPopUp</key>
+						<false/>
+						<key>selectedVariableUUID</key>
+						<string>9B223A5E-7AFD-4C42-B495-18629F8DFE85</string>
+					</dict>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Get Value of Variable.action</string>
+				<key>ActionName</key>
+				<string>Get Value of Variable</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>variableUUID</key>
+					<string>9B223A5E-7AFD-4C42-B495-18629F8DFE85</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Get_Value_of_Variable</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>Get_Value_of_Variable</string>
+				<key>IgnoresInput</key>
+				<true/>
+				<key>InputUUID</key>
+				<string>D947A234-07D9-4F15-81CB-F56FB271FDC7</string>
+				<key>Keywords</key>
+				<array>
+					<string>variable</string>
+					<string>binding</string>
+					<string>input</string>
+					<string>output</string>
+					<string>storage</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>1A1BA233-1809-47BE-81D0-2D9BFD5DC0A9</string>
+				<key>UUID</key>
+				<string>809072E9-4CFC-4324-A663-CCF90EEBAC05</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>variableUUID</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>428.500000:187.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<false/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.1.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict/>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Move Finder Items to Trash.action</string>
+				<key>ActionName</key>
+				<string>Move Finder Items to Trash</string>
+				<key>ActionParameters</key>
+				<dict/>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.MoveToTrash</string>
+				<key>CFBundleVersion</key>
+				<string>1.1.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<true/>
+				<key>CanShowWhenRun</key>
+				<false/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+					<string>AMCategoryFilesAndFolders</string>
+				</array>
+				<key>Class Name</key>
+				<string>MoveToTrashAction</string>
+				<key>InputUUID</key>
+				<string>A70BF829-ADF4-4C22-BF9A-D878DC3A5D15</string>
+				<key>Keywords</key>
+				<array>
+					<string>File</string>
+					<string>Folder</string>
+					<string>Move</string>
+					<string>Trash</string>
+					<string>Delete</string>
+				</array>
+				<key>UUID</key>
+				<string>FC8AB6DE-FD3F-471A-B1CE-E43CD1AEB349</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>arguments</key>
+				<dict/>
+			</dict>
+		</dict>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>053D0106-F522-46AD-8E60-B357C4FB4253</key>
+		<key>0D968C5A-886E-4866-934B-E675D168BD01</key>
 		<dict>
 			<key>from</key>
 			<string>F2443C0F-E5EC-4D89-8457-90236768401E - F2443C0F-E5EC-4D89-8457-90236768401E</string>
 			<key>to</key>
 			<string>DBBF9B3B-369B-442E-A157-03FACC52BADC - DBBF9B3B-369B-442E-A157-03FACC52BADC</string>
 		</dict>
-		<key>300F94EB-90A8-4AEA-AA22-A6F66D1AF7C8</key>
-		<dict>
-			<key>from</key>
-			<string>DBBF9B3B-369B-442E-A157-03FACC52BADC - DBBF9B3B-369B-442E-A157-03FACC52BADC</string>
-			<key>to</key>
-			<string>0E9DC51D-35B5-444C-ADDB-B033ED57BE43 - 0E9DC51D-35B5-444C-ADDB-B033ED57BE43</string>
-		</dict>
-		<key>30548BD2-2AE2-4691-8BF9-C736297D6CF1</key>
+		<key>239FD1B3-47C5-4865-91F3-0772F2154F34</key>
 		<dict>
 			<key>from</key>
 			<string>957543CD-E797-434F-8A43-AC25DBB56B13 - 957543CD-E797-434F-8A43-AC25DBB56B13</string>
 			<key>to</key>
 			<string>C41838BC-A596-48FE-97D4-05474C41680B - C41838BC-A596-48FE-97D4-05474C41680B</string>
 		</dict>
-		<key>3A1AD5C0-5502-443E-9738-D20F5D023944</key>
+		<key>3820A17B-70A0-4BE4-898C-62FBB613A5CD</key>
 		<dict>
 			<key>from</key>
 			<string>C41838BC-A596-48FE-97D4-05474C41680B - C41838BC-A596-48FE-97D4-05474C41680B</string>
 			<key>to</key>
 			<string>0C05B587-F517-4BE7-B067-6F00CD2EB7EA - 0C05B587-F517-4BE7-B067-6F00CD2EB7EA</string>
 		</dict>
-		<key>56F6717D-2CB9-4899-995D-B6DD9664EB9D</key>
+		<key>A3CCBB35-A520-4D5B-AA33-8F22811278E6</key>
 		<dict>
 			<key>from</key>
 			<string>0C05B587-F517-4BE7-B067-6F00CD2EB7EA - 0C05B587-F517-4BE7-B067-6F00CD2EB7EA</string>
 			<key>to</key>
 			<string>F2443C0F-E5EC-4D89-8457-90236768401E - F2443C0F-E5EC-4D89-8457-90236768401E</string>
+		</dict>
+		<key>CD4EC488-A0C9-4ED7-9B83-A34608B3F311</key>
+		<dict>
+			<key>from</key>
+			<string>0E9DC51D-35B5-444C-ADDB-B033ED57BE43 - 0E9DC51D-35B5-444C-ADDB-B033ED57BE43</string>
+			<key>to</key>
+			<string>809072E9-4CFC-4324-A663-CCF90EEBAC05 - 809072E9-4CFC-4324-A663-CCF90EEBAC05</string>
+		</dict>
+		<key>DA2BD653-ED71-45F5-AC1B-FF427D83B774</key>
+		<dict>
+			<key>from</key>
+			<string>809072E9-4CFC-4324-A663-CCF90EEBAC05 - 809072E9-4CFC-4324-A663-CCF90EEBAC05</string>
+			<key>to</key>
+			<string>FC8AB6DE-FD3F-471A-B1CE-E43CD1AEB349 - FC8AB6DE-FD3F-471A-B1CE-E43CD1AEB349</string>
+		</dict>
+		<key>DA795C93-5CAC-4C24-8A82-CA56AAAC8A0A</key>
+		<dict>
+			<key>from</key>
+			<string>DBBF9B3B-369B-442E-A157-03FACC52BADC - DBBF9B3B-369B-442E-A157-03FACC52BADC</string>
+			<key>to</key>
+			<string>0E9DC51D-35B5-444C-ADDB-B033ED57BE43 - 0E9DC51D-35B5-444C-ADDB-B033ED57BE43</string>
 		</dict>
 	</dict>
 	<key>variables</key>
