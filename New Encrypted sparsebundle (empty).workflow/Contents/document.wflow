@@ -21,37 +21,18 @@
 					<true/>
 					<key>Types</key>
 					<array>
-						<string>com.apple.cocoa.string</string>
+						<string>com.apple.applescript.object</string>
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>v.1.1.1</string>
+				<string>1.0.2</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
-					<string>TextEdit</string>
 				</array>
 				<key>AMParameterProperties</key>
 				<dict>
-					<key>buttonAffirmative</key>
-					<dict/>
-					<key>buttonNegative</key>
-					<dict/>
-					<key>defaultAnswer</key>
-					<dict>
-						<key>tokenizedValue</key>
-						<array>
-							<string>$(170E0E01-517B-4AEF-A4EF-BA74B6EDDD23)</string>
-						</array>
-					</dict>
-					<key>defaultMessage</key>
-					<dict>
-						<key>tokenizedValue</key>
-						<array>
-							<string>What would you like to name the encrypted sparsebundle?</string>
-						</array>
-					</dict>
-					<key>requireInput</key>
+					<key>source</key>
 					<dict/>
 				</dict>
 				<key>AMProvides</key>
@@ -60,133 +41,75 @@
 					<string>List</string>
 					<key>Types</key>
 					<array>
-						<string>com.apple.cocoa.string</string>
+						<string>com.apple.applescript.object</string>
 					</array>
 				</dict>
 				<key>ActionBundlePath</key>
-				<string>/System/Library/Automator/Ask for Text.action</string>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
 				<key>ActionName</key>
-				<string>Ask for Text</string>
+				<string>Run AppleScript</string>
 				<key>ActionParameters</key>
 				<dict>
-					<key>buttonAffirmative</key>
-					<string>Continue</string>
-					<key>buttonNegative</key>
-					<string>Cancel</string>
-					<key>defaultAnswer</key>
-					<string>$(170E0E01-517B-4AEF-A4EF-BA74B6EDDD23)</string>
-					<key>defaultMessage</key>
-					<string>What would you like to name the encrypted sparsebundle?</string>
-					<key>requireInput</key>
-					<true/>
+					<key>source</key>
+					<string>on run {input, parameters}		activate	set buttonAndText to display dialog "Enter a filename to create ~/Desktop/{filename}.sparsebundle:" default answer "encrypted" buttons {"Cancel", "Continue"} default button "Continue"		return text returned of buttonAndText	end run</string>
 				</dict>
 				<key>BundleIdentifier</key>
-				<string>com.apple.Automator.TextInputDialog</string>
+				<string>com.apple.Automator.RunScript</string>
 				<key>CFBundleVersion</key>
-				<string>1.1.1</string>
+				<string>1.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
-				<true/>
-				<key>CanShowWhenRun</key>
 				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
 				<key>Category</key>
 				<array>
-					<string>AMCategoryText</string>
+					<string>AMCategoryUtilities</string>
 				</array>
 				<key>Class Name</key>
-				<string>AMAskForTextAction</string>
+				<string>RunScriptAction</string>
+				<key>IgnoresInput</key>
+				<true/>
 				<key>InputUUID</key>
-				<string>9AF5D5EE-2FC7-4F8A-B2A6-09CF69078861</string>
+				<string>F7FF0CF2-D5B5-4E46-B81B-846B59213270</string>
 				<key>Keywords</key>
 				<array>
-					<string>Text</string>
-					<string>Ask</string>
-					<string>Prompt</string>
+					<string>Run</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>8F6F55DE-5CC2-4538-B6E4-0CE39D182D30</string>
-				<key>StartAction</key>
-				<false/>
+				<string>8E9E6AAE-9130-4E43-9706-51F32B76936D</string>
 				<key>UUID</key>
-				<string>63F3C041-CF8C-4F4F-A768-C792BB309503</string>
+				<string>DE151406-42EC-4AB3-B159-81B62151ECDF</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
-					<string>TextEdit</string>
 				</array>
 				<key>arguments</key>
 				<dict>
 					<key>0</key>
 					<dict>
 						<key>default value</key>
-						<string></string>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
 						<key>name</key>
-						<string>defaultAnswer</string>
+						<string>source</string>
 						<key>required</key>
 						<string>0</string>
 						<key>type</key>
 						<string>0</string>
 						<key>uuid</key>
 						<string>0</string>
-					</dict>
-					<key>1</key>
-					<dict>
-						<key>default value</key>
-						<string>OK</string>
-						<key>name</key>
-						<string>buttonAffirmative</string>
-						<key>required</key>
-						<string>0</string>
-						<key>type</key>
-						<string>0</string>
-						<key>uuid</key>
-						<string>1</string>
-					</dict>
-					<key>2</key>
-					<dict>
-						<key>default value</key>
-						<string></string>
-						<key>name</key>
-						<string>defaultMessage</string>
-						<key>required</key>
-						<string>0</string>
-						<key>type</key>
-						<string>0</string>
-						<key>uuid</key>
-						<string>2</string>
-					</dict>
-					<key>3</key>
-					<dict>
-						<key>default value</key>
-						<string>Cancel</string>
-						<key>name</key>
-						<string>buttonNegative</string>
-						<key>required</key>
-						<string>0</string>
-						<key>type</key>
-						<string>0</string>
-						<key>uuid</key>
-						<string>3</string>
-					</dict>
-					<key>4</key>
-					<dict>
-						<key>default value</key>
-						<false/>
-						<key>name</key>
-						<string>requireInput</string>
-						<key>required</key>
-						<string>0</string>
-						<key>type</key>
-						<string>0</string>
-						<key>uuid</key>
-						<string>4</string>
 					</dict>
 				</dict>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:252.000000</string>
+				<string>309.000000:316.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Ask for Text.action/Contents/Resources/Base.lproj/main.nib</string>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -219,6 +142,8 @@
 						<false/>
 						<key>selectedVariableUUID</key>
 						<string>170E0E01-517B-4AEF-A4EF-BA74B6EDDD23</string>
+						<key>variableUUIDsInMenu</key>
+						<array/>
 					</dict>
 				</dict>
 				<key>AMProvides</key>
@@ -292,7 +217,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:358.000000</string>
+				<string>309.000000:422.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Set Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -310,37 +235,18 @@
 					<true/>
 					<key>Types</key>
 					<array>
-						<string>com.apple.cocoa.string</string>
+						<string>com.apple.applescript.object</string>
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>v.1.1.1</string>
+				<string>1.0.2</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
-					<string>TextEdit</string>
 				</array>
 				<key>AMParameterProperties</key>
 				<dict>
-					<key>buttonAffirmative</key>
-					<dict/>
-					<key>buttonNegative</key>
-					<dict/>
-					<key>defaultAnswer</key>
-					<dict>
-						<key>tokenizedValue</key>
-						<array>
-							<string>$(8D35DB43-CC33-4206-8CFD-ACD989830AE8)</string>
-						</array>
-					</dict>
-					<key>defaultMessage</key>
-					<dict>
-						<key>tokenizedValue</key>
-						<array>
-							<string>Please enter a password for the encrypted sparsebundle.</string>
-						</array>
-					</dict>
-					<key>requireInput</key>
+					<key>source</key>
 					<dict/>
 				</dict>
 				<key>AMProvides</key>
@@ -349,135 +255,75 @@
 					<string>List</string>
 					<key>Types</key>
 					<array>
-						<string>com.apple.cocoa.string</string>
+						<string>com.apple.applescript.object</string>
 					</array>
 				</dict>
 				<key>ActionBundlePath</key>
-				<string>/System/Library/Automator/Ask for Text.action</string>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
 				<key>ActionName</key>
-				<string>Ask for Text</string>
+				<string>Run AppleScript</string>
 				<key>ActionParameters</key>
 				<dict>
-					<key>buttonAffirmative</key>
-					<string>Create Encrypted Volume</string>
-					<key>buttonNegative</key>
-					<string>Cancel</string>
-					<key>defaultAnswer</key>
-					<string>$(8D35DB43-CC33-4206-8CFD-ACD989830AE8)</string>
-					<key>defaultMessage</key>
-					<string>Please enter a password for the encrypted sparsebundle.</string>
-					<key>requireInput</key>
-					<true/>
+					<key>source</key>
+					<string>on run {input, parameters}		set buttonAndText to display dialog "Enter a password for the encrypted sparsebundle:" default answer "" buttons {"Cancel", "Continue"} default button "Continue" with hidden answer		return text returned of buttonAndText	end run</string>
 				</dict>
 				<key>BundleIdentifier</key>
-				<string>com.apple.Automator.TextInputDialog</string>
+				<string>com.apple.Automator.RunScript</string>
 				<key>CFBundleVersion</key>
-				<string>1.1.1</string>
+				<string>1.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
-				<true/>
-				<key>CanShowWhenRun</key>
 				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
 				<key>Category</key>
 				<array>
-					<string>AMCategoryText</string>
+					<string>AMCategoryUtilities</string>
 				</array>
 				<key>Class Name</key>
-				<string>AMAskForTextAction</string>
+				<string>RunScriptAction</string>
+				<key>IgnoresInput</key>
+				<true/>
 				<key>InputUUID</key>
-				<string>7C5735B6-A366-4258-A526-6F2228192BEC</string>
+				<string>B066EB54-0F86-486D-8780-DF33FF920F72</string>
 				<key>Keywords</key>
 				<array>
-					<string>Text</string>
-					<string>Ask</string>
-					<string>Prompt</string>
+					<string>Run</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>3372ABFE-C52E-44EE-BD79-11A77B4AB3D5</string>
-				<key>StartAction</key>
-				<false/>
+				<string>DB86356F-CC17-4ABE-9E83-387B04FBDCD7</string>
 				<key>UUID</key>
-				<string>0D1FF488-1ECB-48A3-8D9C-6E4EC1A959E7</string>
+				<string>2C3F0CC7-2A17-40B8-B566-9FE4139598A4</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
-					<string>TextEdit</string>
 				</array>
 				<key>arguments</key>
 				<dict>
 					<key>0</key>
 					<dict>
 						<key>default value</key>
-						<string></string>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
 						<key>name</key>
-						<string>defaultAnswer</string>
+						<string>source</string>
 						<key>required</key>
 						<string>0</string>
 						<key>type</key>
 						<string>0</string>
 						<key>uuid</key>
 						<string>0</string>
-					</dict>
-					<key>1</key>
-					<dict>
-						<key>default value</key>
-						<string>OK</string>
-						<key>name</key>
-						<string>buttonAffirmative</string>
-						<key>required</key>
-						<string>0</string>
-						<key>type</key>
-						<string>0</string>
-						<key>uuid</key>
-						<string>1</string>
-					</dict>
-					<key>2</key>
-					<dict>
-						<key>default value</key>
-						<string></string>
-						<key>name</key>
-						<string>defaultMessage</string>
-						<key>required</key>
-						<string>0</string>
-						<key>type</key>
-						<string>0</string>
-						<key>uuid</key>
-						<string>2</string>
-					</dict>
-					<key>3</key>
-					<dict>
-						<key>default value</key>
-						<string>Cancel</string>
-						<key>name</key>
-						<string>buttonNegative</string>
-						<key>required</key>
-						<string>0</string>
-						<key>type</key>
-						<string>0</string>
-						<key>uuid</key>
-						<string>3</string>
-					</dict>
-					<key>4</key>
-					<dict>
-						<key>default value</key>
-						<false/>
-						<key>name</key>
-						<string>requireInput</string>
-						<key>required</key>
-						<string>0</string>
-						<key>type</key>
-						<string>0</string>
-						<key>uuid</key>
-						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:540.000000</string>
+				<string>309.000000:668.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Ask for Text.action/Contents/Resources/Base.lproj/main.nib</string>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -510,6 +356,8 @@
 						<false/>
 						<key>selectedVariableUUID</key>
 						<string>8D35DB43-CC33-4206-8CFD-ACD989830AE8</string>
+						<key>variableUUIDsInMenu</key>
+						<array/>
 					</dict>
 				</dict>
 				<key>AMProvides</key>
@@ -537,7 +385,7 @@
 				<key>CFBundleVersion</key>
 				<string>1.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
-				<false/>
+				<true/>
 				<key>CanShowWhenRun</key>
 				<true/>
 				<key>Category</key>
@@ -547,7 +395,7 @@
 				<key>Class Name</key>
 				<string>Set_Value_of_Variable</string>
 				<key>InputUUID</key>
-				<string>D45BAFFE-E9FC-4FDD-9E24-E0CE69C46F5E</string>
+				<string>7265A2C7-DA0A-4CE6-9100-41021DFAD9DA</string>
 				<key>Keywords</key>
 				<array>
 					<string>variable</string>
@@ -557,11 +405,9 @@
 					<string>storage</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>70A7CAE8-A0F6-423F-8281-675031639F8D</string>
-				<key>StartAction</key>
-				<false/>
+				<string>2999D6A6-C868-48E7-9FBB-FCC5D69A843C</string>
 				<key>UUID</key>
-				<string>6F6B475A-76AF-4D98-8B03-EA002F9F2C72</string>
+				<string>DBB96FC0-414A-4289-B163-13EDBFF37DD2</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
@@ -582,12 +428,10 @@
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:698.000000</string>
+				<string>309.000000:774.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Set Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -622,6 +466,8 @@
 						<false/>
 						<key>selectedVariableUUID</key>
 						<string>170E0E01-517B-4AEF-A4EF-BA74B6EDDD23</string>
+						<key>variableUUIDsInMenu</key>
+						<array/>
 					</dict>
 				</dict>
 				<key>AMProvides</key>
@@ -674,8 +520,6 @@
 				</array>
 				<key>OutputUUID</key>
 				<string>300D09D9-D2FB-4B87-8145-61F5C8DBF00C</string>
-				<key>StartAction</key>
-				<false/>
 				<key>UUID</key>
 				<string>6BA347F7-CFBC-4B74-8BEE-57A5E0D361D3</string>
 				<key>UnlocalizedApplications</key>
@@ -698,12 +542,10 @@
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:801.000000</string>
+				<string>309.000000:877.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -738,6 +580,8 @@
 						<false/>
 						<key>selectedVariableUUID</key>
 						<string>8D35DB43-CC33-4206-8CFD-ACD989830AE8</string>
+						<key>variableUUIDsInMenu</key>
+						<array/>
 					</dict>
 				</dict>
 				<key>AMProvides</key>
@@ -788,8 +632,6 @@
 				</array>
 				<key>OutputUUID</key>
 				<string>1B32486A-1782-4B87-A975-F89CFB8DBFFE</string>
-				<key>StartAction</key>
-				<false/>
 				<key>UUID</key>
 				<string>90DA4AF5-3B65-43E3-8D7A-77E45DA26331</string>
 				<key>UnlocalizedApplications</key>
@@ -812,12 +654,10 @@
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:904.000000</string>
+				<string>309.000000:980.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -873,9 +713,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>echo $1
-echo $2
-echo -n $2 | hdiutil create ~/Desktop/$1 -encryption AES-256 -stdinpass -volname $1 -fs 'Case-sensitive Journaled HFS+' -type SPARSEBUNDLE -size 1t</string>
+					<string>echo "$(echo -n $2 | hdiutil create ~/Desktop/$1 -encryption AES-256 -stdinpass -volname $1 -fs 'Case-sensitive Journaled HFS+' -type SPARSEBUNDLE -size 1t 2&gt;&amp;1)"</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -990,7 +828,7 @@ echo -n $2 | hdiutil create ~/Desktop/$1 -encryption AES-256 -stdinpass -volname
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:1139.000000</string>
+				<string>309.000000:1343.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -1007,75 +845,63 @@ echo -n $2 | hdiutil create ~/Desktop/$1 -encryption AES-256 -stdinpass -volname
 					<key>Optional</key>
 					<true/>
 					<key>Types</key>
-					<array/>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>1.0</string>
+				<string>1.0.2</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
 				</array>
 				<key>AMParameterProperties</key>
 				<dict>
-					<key>message</key>
-					<dict>
-						<key>tokenizedValue</key>
-						<array>
-							<string>disk image created!</string>
-						</array>
-					</dict>
-					<key>subtitle</key>
+					<key>source</key>
 					<dict/>
-					<key>title</key>
-					<dict>
-						<key>tokenizedValue</key>
-						<array>
-							<string>Automator</string>
-						</array>
-					</dict>
 				</dict>
 				<key>AMProvides</key>
 				<dict>
 					<key>Container</key>
 					<string>List</string>
 					<key>Types</key>
-					<array/>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
 				</dict>
 				<key>ActionBundlePath</key>
-				<string>/System/Library/Automator/Display Notification.action</string>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
 				<key>ActionName</key>
-				<string>Display Notification</string>
+				<string>Run AppleScript</string>
 				<key>ActionParameters</key>
 				<dict>
-					<key>message</key>
-					<string>disk image created!</string>
-					<key>subtitle</key>
-					<string></string>
-					<key>title</key>
-					<string>Automator</string>
+					<key>source</key>
+					<string>on run {input, parameters}		display notification input	end run</string>
 				</dict>
 				<key>BundleIdentifier</key>
-				<string>com.apple.Automator.Display-Notification</string>
+				<string>com.apple.Automator.RunScript</string>
 				<key>CFBundleVersion</key>
-				<string>1.0</string>
+				<string>1.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
-				<true/>
-				<key>CanShowWhenRun</key>
 				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
 				<key>Category</key>
 				<array>
 					<string>AMCategoryUtilities</string>
 				</array>
 				<key>Class Name</key>
-				<string>AMDisplayNotificationAction</string>
+				<string>RunScriptAction</string>
 				<key>InputUUID</key>
-				<string>71701C81-6A0E-4473-9A3F-D9F9C68F4317</string>
+				<string>21E3B252-A755-4D22-A3ED-1DD3E0B9CB8A</string>
 				<key>Keywords</key>
-				<array/>
+				<array>
+					<string>Run</string>
+				</array>
 				<key>OutputUUID</key>
-				<string>C3437A13-B9EE-4D62-BF20-7C84056C6125</string>
+				<string>CDAC1DA3-B1F2-4F62-A8DD-BC5614BFF617</string>
 				<key>UUID</key>
-				<string>BC6D0079-1F17-4C25-B94B-B3E7A9836E44</string>
+				<string>23D25704-F55A-483E-A785-F57A2FDC2144</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
@@ -1085,49 +911,30 @@ echo -n $2 | hdiutil create ~/Desktop/$1 -encryption AES-256 -stdinpass -volname
 					<key>0</key>
 					<dict>
 						<key>default value</key>
-						<string></string>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
 						<key>name</key>
-						<string>subtitle</string>
+						<string>source</string>
 						<key>required</key>
 						<string>0</string>
 						<key>type</key>
 						<string>0</string>
 						<key>uuid</key>
 						<string>0</string>
-					</dict>
-					<key>1</key>
-					<dict>
-						<key>default value</key>
-						<string></string>
-						<key>name</key>
-						<string>title</string>
-						<key>required</key>
-						<string>0</string>
-						<key>type</key>
-						<string>0</string>
-						<key>uuid</key>
-						<string>1</string>
-					</dict>
-					<key>2</key>
-					<dict>
-						<key>default value</key>
-						<string></string>
-						<key>name</key>
-						<string>message</string>
-						<key>required</key>
-						<string>0</string>
-						<key>type</key>
-						<string>0</string>
-						<key>uuid</key>
-						<string>2</string>
 					</dict>
 				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:1329.000000</string>
+				<string>309.000000:1589.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Display Notification.action/Contents/Resources/Base.lproj/main.nib</string>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -1135,54 +942,54 @@ echo -n $2 | hdiutil create ~/Desktop/$1 -encryption AES-256 -stdinpass -volname
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>416356DA-9525-482A-ACB0-70B091A95B1B</key>
-		<dict>
-			<key>from</key>
-			<string>90DA4AF5-3B65-43E3-8D7A-77E45DA26331 - 90DA4AF5-3B65-43E3-8D7A-77E45DA26331</string>
-			<key>to</key>
-			<string>41B5948A-363F-4FAA-A0E0-E62CC6D14982 - 41B5948A-363F-4FAA-A0E0-E62CC6D14982</string>
-		</dict>
-		<key>4DDA7A0B-6572-40D8-B4EA-22B9EB467991</key>
-		<dict>
-			<key>from</key>
-			<string>6F6B475A-76AF-4D98-8B03-EA002F9F2C72 - 6F6B475A-76AF-4D98-8B03-EA002F9F2C72</string>
-			<key>to</key>
-			<string>6BA347F7-CFBC-4B74-8BEE-57A5E0D361D3 - 6BA347F7-CFBC-4B74-8BEE-57A5E0D361D3</string>
-		</dict>
-		<key>99F9EADD-8830-442C-A122-66E1E2785547</key>
+		<key>08135D9F-C5DA-47F7-AC9D-14F92298E7EA</key>
 		<dict>
 			<key>from</key>
 			<string>6BA347F7-CFBC-4B74-8BEE-57A5E0D361D3 - 6BA347F7-CFBC-4B74-8BEE-57A5E0D361D3</string>
 			<key>to</key>
 			<string>90DA4AF5-3B65-43E3-8D7A-77E45DA26331 - 90DA4AF5-3B65-43E3-8D7A-77E45DA26331</string>
 		</dict>
-		<key>CB45A211-3B47-4A85-859F-EADE544BAD49</key>
+		<key>39B10148-D563-473E-9590-F1BE370A2830</key>
 		<dict>
 			<key>from</key>
-			<string>02EDDC79-D8A9-400D-B3BE-99DB18019ACA - 02EDDC79-D8A9-400D-B3BE-99DB18019ACA</string>
+			<string>90DA4AF5-3B65-43E3-8D7A-77E45DA26331 - 90DA4AF5-3B65-43E3-8D7A-77E45DA26331</string>
 			<key>to</key>
-			<string>0D1FF488-1ECB-48A3-8D9C-6E4EC1A959E7 - 0D1FF488-1ECB-48A3-8D9C-6E4EC1A959E7</string>
+			<string>41B5948A-363F-4FAA-A0E0-E62CC6D14982 - 41B5948A-363F-4FAA-A0E0-E62CC6D14982</string>
 		</dict>
-		<key>E3AFDF9B-E292-41FC-A09A-6A069EAFC0ED</key>
-		<dict>
-			<key>from</key>
-			<string>0D1FF488-1ECB-48A3-8D9C-6E4EC1A959E7 - 0D1FF488-1ECB-48A3-8D9C-6E4EC1A959E7</string>
-			<key>to</key>
-			<string>6F6B475A-76AF-4D98-8B03-EA002F9F2C72 - 6F6B475A-76AF-4D98-8B03-EA002F9F2C72</string>
-		</dict>
-		<key>F243C0E2-278F-4771-B925-7918D5FE9E29</key>
-		<dict>
-			<key>from</key>
-			<string>63F3C041-CF8C-4F4F-A768-C792BB309503 - 63F3C041-CF8C-4F4F-A768-C792BB309503</string>
-			<key>to</key>
-			<string>02EDDC79-D8A9-400D-B3BE-99DB18019ACA - 02EDDC79-D8A9-400D-B3BE-99DB18019ACA</string>
-		</dict>
-		<key>F5AE558F-379A-4249-8263-945EC314D1DE</key>
+		<key>616CBB5C-4354-40CD-8B95-A4F06CBC4D0B</key>
 		<dict>
 			<key>from</key>
 			<string>41B5948A-363F-4FAA-A0E0-E62CC6D14982 - 41B5948A-363F-4FAA-A0E0-E62CC6D14982</string>
 			<key>to</key>
-			<string>BC6D0079-1F17-4C25-B94B-B3E7A9836E44 - BC6D0079-1F17-4C25-B94B-B3E7A9836E44</string>
+			<string>23D25704-F55A-483E-A785-F57A2FDC2144 - 23D25704-F55A-483E-A785-F57A2FDC2144</string>
+		</dict>
+		<key>98BAA9A9-0526-4D6F-971C-DE26D86FF60A</key>
+		<dict>
+			<key>from</key>
+			<string>2C3F0CC7-2A17-40B8-B566-9FE4139598A4 - 2C3F0CC7-2A17-40B8-B566-9FE4139598A4</string>
+			<key>to</key>
+			<string>DBB96FC0-414A-4289-B163-13EDBFF37DD2 - DBB96FC0-414A-4289-B163-13EDBFF37DD2</string>
+		</dict>
+		<key>DEEB8873-E881-4626-B5DF-6BA1C527411C</key>
+		<dict>
+			<key>from</key>
+			<string>02EDDC79-D8A9-400D-B3BE-99DB18019ACA - 02EDDC79-D8A9-400D-B3BE-99DB18019ACA</string>
+			<key>to</key>
+			<string>2C3F0CC7-2A17-40B8-B566-9FE4139598A4 - 2C3F0CC7-2A17-40B8-B566-9FE4139598A4</string>
+		</dict>
+		<key>F159D7D5-777F-4DBC-B629-C125051A0C02</key>
+		<dict>
+			<key>from</key>
+			<string>DBB96FC0-414A-4289-B163-13EDBFF37DD2 - DBB96FC0-414A-4289-B163-13EDBFF37DD2</string>
+			<key>to</key>
+			<string>6BA347F7-CFBC-4B74-8BEE-57A5E0D361D3 - 6BA347F7-CFBC-4B74-8BEE-57A5E0D361D3</string>
+		</dict>
+		<key>FC65CE16-7B23-4376-9D70-7BC7D6A23D5E</key>
+		<dict>
+			<key>from</key>
+			<string>DE151406-42EC-4AB3-B159-81B62151ECDF - DE151406-42EC-4AB3-B159-81B62151ECDF</string>
+			<key>to</key>
+			<string>02EDDC79-D8A9-400D-B3BE-99DB18019ACA - 02EDDC79-D8A9-400D-B3BE-99DB18019ACA</string>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -1195,29 +1002,7 @@ echo -n $2 | hdiutil create ~/Desktop/$1 -encryption AES-256 -stdinpass -volname
 			<key>name</key>
 			<string>volume</string>
 			<key>value</key>
-			<string>volume</string>
-		</dict>
-		<dict>
-			<key>UUID</key>
-			<string>96E752A7-74BF-4045-B8CC-F14B4656CECE</string>
-			<key>identifier</key>
-			<string>com.apple.Automator.Variable.Text</string>
-			<key>name</key>
-			<string>volume_name 1</string>
-			<key>value</key>
-			<string>calc</string>
-		</dict>
-		<dict>
-			<key>UUID</key>
-			<string>57AED815-47CD-491C-B005-25E44E0E7AA2</string>
-			<key>identifier</key>
-			<string>com.apple.Automator.Variable.Text</string>
-			<key>name</key>
-			<string>volume</string>
-			<key>value</key>
-			<array>
-				<string>volume</string>
-			</array>
+			<string>encrypted32423145</string>
 		</dict>
 		<dict>
 			<key>UUID</key>
@@ -1227,15 +1012,7 @@ echo -n $2 | hdiutil create ~/Desktop/$1 -encryption AES-256 -stdinpass -volname
 			<key>name</key>
 			<string>passwd</string>
 			<key>value</key>
-			<string>*****</string>
-		</dict>
-		<dict>
-			<key>UUID</key>
-			<string>FBBD0E18-AFA3-4FCA-9A51-2D5A6F6C1492</string>
-			<key>identifier</key>
-			<string>com.apple.Automator.Variable.Storage</string>
-			<key>name</key>
-			<string>files</string>
+			<string>1</string>
 		</dict>
 	</array>
 	<key>workflowMetaData</key>
